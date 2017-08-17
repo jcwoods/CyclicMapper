@@ -40,21 +40,29 @@ class CyclicMapper:
             raise RuntimeError('missing required parameter (r, c, or d)')
 
         self.max_val = float(maxValue)    # highest value to be passed in
+        self.c = self.twopi / self.max_val
+
+        # make functions a local reference (global refs are expensive!)
+        self.sin = math.sin
+        self.cos = math.cos
         return
 
     def getTuple(self, val):
+        val = float(val)
         if val < 0 or val >= self.max_val:
             errMsg = 'input value {0:f} outside of range (0, {1:f})'.format(val, self.max_val)
             raise ValueError(errMsg)
 
-        x = math.cos((float(val) / self.max_val) * self.twopi) * self.radius
-        y = math.sin((float(val) / self.max_val) * self.twopi) * self.radius
+        v = val * self.c
+        x = self.cos(v) * self.radius
+        y = self.sin(v) * self.radius
         return (x,y)
 
 def main():
-    conv = CyclicMapper( (24 * 7), r=1)
+    conv = CyclicMapper( (7 * 24) , r=1)
+    stdin = sys.stdin
 
-    for line in sys.stdin:
+    for line in stdin:
         val = int(line.strip())
         print(str(conv.getTuple(val)))
 
