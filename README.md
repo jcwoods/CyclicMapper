@@ -11,7 +11,7 @@ true of of time, including days of the week, hours of the day, etc.
 As an excample, assign the days of the week to a scale 0..6 (Sunday = 0,
 Saturday = 6).  On a linear scale, Sunday and Saturday are 6 units apart.
 
-![CyclicMapper problem](https://github.com/jcwoods/CyclicMapper/images/CyclicMapper-problem.png)
+![CyclicMapper problem](https://github.com/jcwoods/CyclicMapper/blob/master/images/CyclicData-problem.png?raw=true)
 
 On a circle,
 
