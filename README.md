@@ -25,6 +25,11 @@ vector, we replace it with these two dimensions.
 This DOES NOT preserve the absolute distance between points, but it does
 preserve a relative distance that works well for many applications.
 
+Installation
+------------
+```python
+$ python setup.py install
+```
 
 Usage
 ------------
@@ -45,11 +50,16 @@ for d in days:
     xy = cm.getTuple(days_dict[d])
     print('{0:s}: {1:s}'.format(d, str(xy)))
 ```
+Here, we are mapping the days of the week to a circle with a radius of 1.
+Alternately, we may have specified the circumference of the circle (eg, "c=7"
+rather than "r=1") in the constructor.  The ability to modify the radius or
+circumference allows the mapped values to be scaled to the model you are
+building.
 
 This produces the output:
 
 ```
-CyclicMapper$ python test.py 
+$ python test.py 
 Sunday: (1.0, 0.0)
 Monday: (0.6234898018587336, 0.7818314824680298)
 Tuesday: (-0.22252093395631434, 0.9749279121818236)
