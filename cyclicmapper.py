@@ -57,15 +57,3 @@ class CyclicMapper:
         x = self.cos(v) * self.radius
         y = self.sin(v) * self.radius
         return (x,y)
-
-def main():
-    conv = CyclicMapper( (7 * 24) , r=1)
-    stdin = sys.stdin
-
-    for line in stdin:
-        val = int(line.strip())
-        print(str(conv.getTuple(val)))
-
-if __name__ == "__main__":
-    main()
-    sys.exit(0)
