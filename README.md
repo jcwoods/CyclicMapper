@@ -20,7 +20,7 @@ On a circle,
 Instead, we map a linear value (0..6) into tuples.  These tuples are x and y
 coordinates representing the position of the linear value mapped onto the
 perimeter of a circle.  Instead of using a single linear dimension in our
-vector, we replace it with these two dimensions.
+model, we replace the original value with these two dimensions.
 
 This DOES NOT preserve the absolute distance between points, but it does
 preserve a relative distance that works well for many applications.
