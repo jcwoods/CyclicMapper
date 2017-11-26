@@ -11,11 +11,11 @@ true of of time, including days of the week, hours of the day, etc.
 As an excample, assign the days of the week to a scale 0..6 (Sunday = 0,
 Saturday = 6).  On a linear scale, Sunday and Saturday are 6 units apart.
 
-![CyclicMapper problem](/jcwoods/CyclicMapper/images/CyclicMapper-problem.png)
+![CyclicMapper problem](https://github.com/jcwoods/CyclicMapper/images/CyclicMapper-problem.png)
 
 On a circle,
 
-![CyclicMapper problem](/jcwoods/CyclicMapper/images/CyclicMapper-solution.png)
+![CyclicMapper solution](https://github.com/jcwoods/CyclicMapper/images/CyclicMapper-solution.png)
 
 Instead, we map a linear value (0..6) into tuples.  These tuples are x and y
 coordinates representing the position of the linear value mapped onto the
